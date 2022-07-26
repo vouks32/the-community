@@ -15,9 +15,9 @@ var parseUrl = function(url) {
 
 app.get('/', function(req, res) {
     var urlToScreenshot = parseUrl(req.query.url);
-
+     res.send("yeah!");
     if (validUrl.isWebUri(urlToScreenshot)) {
-        console.log('Screenshotting: ' + urlToScreenshot);
+        console.log('Screenshot: ' + urlToScreenshot);
         (async() => {
             const browser = await puppeteer.launch({
                 args: ['--no-sandbox', '--disable-setuid-sandbox']

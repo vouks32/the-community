@@ -1,0 +1,242 @@
+ [
+   {
+     "id": 0,
+     "nom": "Agresser",
+     "type": "mauvais",
+     "initiateur": {
+       "description-m": "Vous avez agréssé quelqu'un et avait volé :",
+       "description-f": "Vous avez agréssée quelqu'un et avait volée :",
+       "effets": [{
+         "nom": "argent",
+         "valeur": 500,
+         "defaut": true
+       }, {
+         "nom": "joie",
+         "valeur": 60,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": 5,
+         "defaut": false
+       }]
+     },
+     "initie": {
+       "description-m": "Il était 22h, vous rentriez paisiblement de votre soirée lorsque vous remarqué quelqu'un qui vous suit. Vous prennez les pétites routes pour l'échapper mais voila, cul-de-sac! *Vous vous êtes fait agrésser !* et votre agresseur vous à dérobé :",
+       "description-f": "Il était 22h, vous rentriez paisiblement de votre soirée lorsque vous remarquez quelqu'un qui vous suit. Vous prennez les pétites routes pour l'échapper mais voila, cul-de-sac! *Vous vous êtes faites agrésser !* et votre agresseur vous à dérobé :",
+       "effets": [{
+         "nom": "argent",
+         "valeur": -500,
+         "defaut": true
+       }, {
+         "nom": "joie",
+         "valeur": -30,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": -30,
+         "defaut": false
+       }, {
+         "nom": "hopital",
+         "valeur": true,
+         "defaut": true,
+         "conditions": [{
+           "force": 30
+         }]
+       }, {
+         "nom": "mort",
+         "valeur": true,
+         "defaut": true,
+         "conditions": [{
+           "force": 60
+         }]
+       }]
+     },
+     "témoin": {
+       "description-m": "Vous avez été témoins d'une scène d'agression",
+       "description-f": "Vous avez été témoins d'une scène d'agression",
+       "effets": [{
+         "nom": "joie",
+         "valeur": -10,
+         "defaut": true
+       }]
+     }
+   },
+   {
+     "id": 1,
+     "nom": "Violer",
+     "type": "mauvais",
+     "initiateur": {
+       "description-m": "Vous avez violé quelqu'un. :",
+       "description-f": "Vous avez violée quelqu'un. :",
+       "effets": [{
+         "nom": "argent",
+         "valeur": 100,
+         "defaut": true
+       }, {
+         "nom": "joie",
+         "valeur": 60,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": 50,
+         "defaut": false
+       }]
+     },
+     "initie": {
+       "description-m": "vous avez toujours redouté ce jour, votre corps étant la convoitise de plusieurs personnes, ce soir vous vous êtes faits violer! et votre violeur vous à dérobé :",
+       "description-f": "vous avez toujours redouté ce jour, votre corps étant la convoitise de plusieurs personnes, ce soir vous vous êtes faites violer! et votre violeur vous à dérobé :",
+       "effets": [{
+         "nom": "argent",
+         "valeur": -100,
+         "defaut": true
+       }, {
+         "nom": "joie",
+         "valeur": -60,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": -30,
+         "defaut": false
+       }, {
+         "nom": "hopital",
+         "valeur": true,
+         "defaut": true,
+         "conditions": [{
+           "force": 50
+         }]
+       }]
+     },
+     "témoin": {
+       "description-m": "Vous avez été témoins d'une scène de viole",
+       "description-f": "Vous avez été témoins d'une scène de viole",
+       "effets": [{
+         "nom": "joie",
+         "valeur": "-10",
+         "defaut": true
+       }]
+     }
+   },
+  {
+     "id": 2,
+     "nom": "Tuer",
+     "type": "mauvais",
+     "initiateur": {
+       "description-m": "Vous avez Tuer quelqu'un. :",
+       "description-f": "Vous avez Tuer quelqu'un. :",
+       "effets": [{
+         "nom": "argent",
+         "valeur": 700,
+         "defaut": true
+       }, {
+         "nom": "joie",
+         "valeur": 30,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": 30,
+         "defaut": false
+       }]
+     },
+     "initie": {
+       "description-m": "_C'est à n'y rien comprendre, un jour vous êtes en forme, un autre jour vous êtes mort._ \n*Vous avez été tué !*",
+       "description-f": "_C'est à n'y rien comprendre, un jour vous êtes en forme, un autre jour vous êtes mort._ \n*Vous avez été tué !*",
+       "effets": [{
+         "nom": "mort",
+         "valeur": true,
+         "defaut": true
+       }]
+     },
+     "témoin": {
+       "description-m": "Vous avez été témoins d'une scène de meurtre",
+       "description-f": "Vous avez été témoins d'une scène de meurtre",
+       "effets": [{
+         "nom": "joie",
+         "valeur": "20",
+         "defaut": true
+       }]
+     }
+   },
+  {
+     "id": 3,
+     "nom": "Rencontre Amoureuse",
+     "type": "bien",
+     "initiateur": {
+       "description-m": "Vous avez rencontré quelqu'un.",
+       "description-f": "Vous avez rencontré quelqu'un.",
+       "effets": [{
+         "nom": "joie",
+         "valeur": 2,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": 2,
+         "defaut": false
+       }]
+     },
+     "initie": {
+       "description-m": "Cette inconnue vous à aborder en route",
+       "description-f": "Cette inconnue vous à aborder en route",
+       "effets": [{
+         "nom": "joie",
+         "valeur": 5,
+         "defaut": true
+       },{
+         "nom": "joie",
+         "valeur": 5,
+         "defaut": true,
+         "conditions": [{
+           "force": 50
+         }]
+       }]
+     }
+   },
+  {
+     "id": 4,
+     "nom": "Suicide",
+     "type": "bien",
+     "initiateur": {
+       "description-m": "Vous vous êtes suicidé.",
+       "description-f": "Vous vous êtes suicidé.",
+       "effets": [{
+         "nom": "mort",
+         "valeur": true,
+         "defaut": true
+       }]
+     }
+   },
+	 {
+     "id": 3,
+     "nom": "Rencontre Amoureuse",
+     "type": "bien",
+     "initiateur": {
+       "description-m": "Vous avez rencontré quelqu'un.",
+       "description-f": "Vous avez rencontré quelqu'un.",
+       "effets": [{
+         "nom": "joie",
+         "valeur": 2,
+         "defaut": true
+       }, {
+         "nom": "charisme",
+         "valeur": 2,
+         "defaut": false
+       }]
+     },
+     "initie": {
+       "description-m": "Cette inconnue vous à aborder en route",
+       "description-f": "Cette inconnue vous à aborder en route",
+       "effets": [{
+         "nom": "joie",
+         "valeur": 5,
+         "defaut": true
+       },{
+         "nom": "joie",
+         "valeur": 5,
+         "defaut": true,
+         "conditions": [{
+           "force": 30
+         }]
+       }]
+     }
+   },
+
+ ]

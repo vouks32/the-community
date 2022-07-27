@@ -1,0 +1,46 @@
+ [{
+   "id": 0,
+   "nom": "La science",
+    "description": "Le talent de 'la science' vous permet d'être éfficace dans des postes tel que *physicien, chimiste, informaticien, Biologiste et tout autre métier lié à la science* et gagner plus",
+	 "taux":12
+ },{
+   "id": 1,
+   "nom": "La bonne Parole",
+    "description": "Le talent de 'la bonne parole' vous permet d'être éfficace dans des postes tel que *président, Stratège marketing/politique, Secrétaire, Avocat, prêtre, ministre et tout autre métier lié à la prise parole* et gagner plus",
+	 "taux":8
+ },{
+   "id": 2,
+   "nom": "L’ingénierie",
+    "description": "Le talent de 'l’ingénierie' vous permet d'être éfficace dans des postes tel que *président, informaticien, physicien, Mathematicien, prêtre et tout autre métier lié à l’ingénierie* et gagner plus",
+	 "taux":10
+ },{
+   "id": 3,
+   "nom": "La créativité",
+    "description": "Le talent de 'la créativité' vous permet d'être éfficace dans *tout les postes* et gagner plus",
+	 "taux":10
+ },{
+   "id": 4,
+   "nom": "La beauté",
+    "description": "Le talent de 'la beauté' vous permet d'être éfficace dans des postes tel que *président, Stratège marketing/politique,Stagiaire, Secrétaire, Avocat, ministre et tout autre métier lié à la beauté* et gagner plus",
+	 "taux":5
+ },{
+   "id": 5,
+   "nom": "La stratégie",
+    "description": "Le talent de 'La stratégie' vous permet d'être éfficace dans des postes tel que *président, Avocat, Ministre, Stratège marketing/politique et tout autre métier lié à La stratégie* et gagner plus",
+	 "taux":10
+ },{
+   "id": 6,
+   "nom": "L’investigation/l’observation",
+    "description": "Le talent de 'L’investigation/l’observation' vous permet d'être éfficace dans des postes tel que *Policier, informaticien, physicien, Mathematicien, Avocat et tout autre métier lié à L’investigation/l’observation* et gagner plus",
+	 "taux":10
+ },{
+   "id": 7,
+   "nom": "La conduite (véhicule)",
+    "description": "Le talent de 'La conduite' vous permet d'être éfficace dans des postes tel que *Secrétaire, Stagière, Policier, Chauffeur et tout autre métier lié à La conduite* et gagner plus",
+	 "taux":10
+ },{
+   "id": 8,
+   "nom": "Manuel ",
+    "description": "Le talent de 'Manuel' vous permet d'être éfficace dans des postes tel que *Stagière, Policier, Gardien et tout autre métier lié au traveaux manuel* et gagner plus",
+	 "taux":10
+ }]

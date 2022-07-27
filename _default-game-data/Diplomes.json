@@ -1,0 +1,127 @@
+ [{
+   "id": 0,
+   "nom": "informatique",
+   "description": "Grace a un diplome en informatique vous prouvez que vous êtes un génie de tout appareil éléctronique",
+   "type": [{
+       "niveau": 0,
+	   "temp" : 172800,
+       "type": "license"
+     },
+     {
+       "niveau": 1,
+		"temp" : 172800,
+       "type": "master"
+     },
+     {
+       "niveau": 2,
+		 "temp" : 172800,
+       "type": "Doctorat"
+     }
+   ],
+	"niveau_de_travail": 0 
+ },{
+   "id": 1,
+   "nom": "bio-chimie",
+   "description": "Grace a un diplome en bio-Chimie vous prouvez que vous êtes un génie de tout de toute chose organique",
+   "type": [{
+       "niveau": 0,
+	   "temp" : 259200,
+       "type": "license"
+     },
+     {
+       "niveau": 1,
+		"temp" : 172800,
+       "type": "master"
+     },
+     {
+       "niveau": 2,
+		 "temp" : 172800,
+       "type": "Doctorat"
+     }
+   ],
+	"niveau_de_travail": 0 
+ },{
+   "id": 2,
+   "nom": "Religion",
+   "description": "Grace a un diplome en religion vous prouvez que vous êtes un homme pieu et apte à partager la bonne parole",
+   "type": [{
+       "niveau": 0,
+	   "temp": 345600;
+       "type": "Certificat d'aptitude"
+     },
+     {
+       "niveau": 1,
+		"temp": 345600; 
+       "type": "Ordonance"
+     },
+     {
+       "niveau": 2,
+		"temp": 432000,
+       "type": "Sanctification"
+     }
+   ],
+	"niveau_de_travail": 1 
+ },{
+   "id": 3,
+   "nom": "physique",
+   "description": "Grace a un diplome en physique vous prouvez que vous êtes un génie de tout les principes physique qui gouverne ce monde",
+   "type": [{
+       "niveau": 0,
+	   "temp" : 259200,
+       "type": "license"
+     },
+     {
+       "niveau": 1,
+		"temp" : 172800,
+       "type": "master"
+     },
+     {
+       "niveau": 2,
+		 "temp" : 172800,
+       "type": "Doctorat"
+     }
+   ],
+	"niveau_de_travail": 0 
+ },{
+   "id": 4,
+   "nom": "Mathematique",
+   "description": "Grace a un diplome en Mathematique vous prouvez que vous êtes un génie ds calculs",
+   "type": [{
+       "niveau": 0,
+	   "temp" : 259200,
+       "type": "license"
+     },
+     {
+       "niveau": 1,
+		"temp" : 172800,
+       "type": "master"
+     },
+     {
+       "niveau": 2,
+		 "temp" : 172800,
+       "type": "Doctorat"
+     }
+   ],
+	"niveau_de_travail": 1 
+ },{
+   "id": 5,
+   "nom": "Droit et marketing",
+   "description": "Grace a un diplome en Droit vous prouvez que vous êtes en harmonie avec le code pénal et les loies de la communauté",
+   "type": [{
+       "niveau": 0,
+	   "temp" : 259200,
+       "type": "license"
+     },
+     {
+       "niveau": 1,
+		"temp" : 172800,
+       "type": "master"
+     },
+     {
+       "niveau": 2,
+		 "temp" : 5187400,
+       "type": "Doctorat"
+     }
+   ],
+	"niveau_de_travail": 0 
+ }]

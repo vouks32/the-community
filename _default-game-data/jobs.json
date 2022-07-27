@@ -1,0 +1,606 @@
+ [{
+   "id": 0,
+   "nom": "Informaticien",
+   "description": "Gérer l'informatique d'une structure",
+   "diplomes": [{
+       "id": 0,
+       "requis": true
+     },
+     {
+       "id": 4,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 0
+   }, {
+     "id": 2
+   }, {
+     "id": 3
+   }, {
+     "id": 6
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 900,
+     "mi_temps": 400
+   }, {
+     "niveau": 1,
+     "plein_temps": 1200,
+     "mi_temps": 500
+   }, {
+     "niveau": 2,
+     "plein_temps": 1500,
+     "mi_temps": 700
+   }]
+
+ }, {
+   "id": 1,
+   "nom": "Chimiste",
+   "description": "Gérer l'utilisation de composants chimique",
+   "diplomes": [{
+       "id": 1,
+       "requis": true
+     },
+     {
+       "id": 3,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 0
+   }, {
+     "id": 2
+   }, {
+     "id": 3
+   }, {
+     "id": 6
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 1000,
+     "mi_temps": 400
+   }, {
+     "niveau": 1,
+     "plein_temps": 1200,
+     "mi_temps": 500
+   }, {
+     "niveau": 2,
+     "plein_temps": 1500,
+     "mi_temps": 700
+   }]
+
+
+ }, {
+   "id": 2,
+   "nom": "Biologiste",
+   "description": "Gérer l'utilisation de composants Biologique",
+   "diplomes": [{
+       "id": 1,
+       "requis": true
+     },
+     {
+       "id": 3,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 0
+   }, {
+     "id": 2
+   }, {
+     "id": 3
+   }, {
+     "id": 6
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 1000,
+     "mi_temps": 400
+   }, {
+     "niveau": 1,
+     "plein_temps": 1200,
+     "mi_temps": 500
+   }, {
+     "niveau": 2,
+     "plein_temps": 1500,
+     "mi_temps": 700
+   }]
+
+
+ }, {
+   "id": 3,
+   "nom": "Physicien",
+   "description": "Gérer tout aspect physique, méchanique et éléctronique",
+   "diplomes": [{
+       "id": 3,
+       "requis": true
+     },
+     {
+       "id": 0,
+       "requis": false
+     },
+     {
+       "id": 4,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 0
+   }, {
+     "id": 2
+   }, {
+     "id": 3
+   }, {
+     "id": 6
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 1200,
+     "mi_temps": 500
+   }, {
+     "niveau": 1,
+     "plein_temps": 1400,
+     "mi_temps": 600
+   }, {
+     "niveau": 2,
+     "plein_temps": 1700,
+     "mi_temps": 800
+   }]
+
+
+ }, {
+   "id": 4,
+   "nom": "Mathématicien",
+   "description": "Gérer tout aspect mathématique",
+   "diplomes": [{
+       "id": 4,
+       "requis": true
+     },
+     {
+       "id": 3,
+       "requis": false
+     },
+     {
+       "id": 0,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 0
+   }, {
+     "id": 2
+   }, {
+     "id": 3
+   }, {
+     "id": 6
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 1200,
+     "mi_temps": 500
+   }, {
+     "niveau": 1,
+     "plein_temps": 1400,
+     "mi_temps": 600
+   }, {
+     "niveau": 2,
+     "plein_temps": 1700,
+     "mi_temps": 800
+   }]
+ }, {
+   "id": 5,
+   "nom": "Servant de Messe",
+   "description": "Servir le seigneur",
+   "diplomes": [{
+       "id": 2,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 7
+   }, {
+     "id": 3
+   }],
+   "salaire": [{
+     "niveau": 0,
+     "plein_temps": 0,
+     "mi_temps": 300
+   }],
+	 "primes" : ["joie","Grade-A"] 
+ }, {
+   "id": 6,
+   "nom": "Prêtre",
+   "description": "Servir le seigneur",
+   "diplomes": [{
+       "id": 2,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 7
+   }, {
+     "id": 3
+   }],
+   "salaire": [{
+     "niveau": 1,
+     "plein_temps": 1700,
+     "mi_temps": 0
+   },{
+     "niveau": 2,
+     "plein_temps": 2000,
+     "mi_temps": 0
+   }],
+	 "primes" : ["joie","Grade-A"] 
+ }, {
+   "id": 7,
+   "nom": "Avocat",
+   "description": "Gérer tout aspect juridique",
+   "diplomes": [{
+       "id": 5,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 1600,
+     "mi_temps": 800
+   }, {
+     "niveau": 2,
+     "plein_temps": 1900,
+     "mi_temps": 900
+   }]
+ }, {
+   "id": 8,
+   "nom": "secrétaire",
+   "description": "Gérer tout aspect secrétarial",
+   "diplomes": [{
+       "id": 0,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 7
+   }],
+   "salaire": [
+	  {
+     "niveau": 0,
+     "plein_temps": 0,
+     "mi_temps": 400
+   }]
+ }, {
+   "id": 9,
+   "nom": "Gardien",
+   "description": "Gérer tout aspect de protection",
+   "diplomes": [{
+       "id": 0,
+       "requis": false
+     }
+   ],
+   "talents": [ {
+     "id": 3
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 8
+   }],
+   "salaire": [
+	  {
+     "niveau": 0,
+     "plein_temps": 600,
+     "mi_temps": 300
+   }]
+ }, {
+   "id": 10,
+   "nom": "Stratège marketing/politique",
+   "description": "Gérer tout aspect stratégique",
+   "diplomes": [{
+       "id": 5,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 2000,
+     "mi_temps": 0
+   }, {
+     "niveau": 2,
+     "plein_temps": 2500,
+     "mi_temps": 0
+   }]
+ }, {
+   "id": 11,
+   "nom": "Stagiaire",
+   "description": "Aider dans la structure",
+   "diplomes": [{
+       "id": 0,
+       "requis": false
+     },{
+       "id": 1,
+       "requis": false
+     },{
+       "id": 2,
+       "requis": false
+     },{
+       "id": 4,
+       "requis": false
+     },{
+       "id": 5,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 7
+   }, {
+     "id": 8
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 0,
+     "mi_temps": 500
+   }]
+ }, {
+   "id": 12,
+   "nom": "Président",
+   "description": "Gouverner",
+   "diplomes": [{
+       "id": 5,
+       "requis": false
+     },{
+       "id": 2,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 8000,
+     "mi_temps": 0
+   }]
+ }, {
+   "id": 13,
+   "nom": "Ministre",
+   "description": "Gérer les affaires administratives",
+   "diplomes": [{
+       "id": 5,
+       "requis": false
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 6000,
+     "mi_temps": 0
+   }]
+ }, {
+   "id": 14,
+   "nom": "Policier",
+   "description": "Faire reigner la loie",
+   "diplomes": [{
+       "id": 5,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 7
+   }, {
+     "id": 8
+   }],
+   "salaire": [
+	  {
+     "niveau": 0,
+     "plein_temps": 1100,
+     "mi_temps": 0
+   },{
+     "niveau": 1,
+     "plein_temps": 1500,
+     "mi_temps": 0
+   },{
+     "niveau": 2,
+     "plein_temps": 1900,
+     "mi_temps": 0
+   }]
+ }, {
+   "id": 15,
+   "nom": "Chauffeur",
+   "description": "Aider dans la structure",
+   "diplomes": [],
+   "talents": [ {
+     "id": 2
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 7
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 700,
+     "mi_temps": 300
+   }]
+ }, {
+   "id": 16,
+   "nom": "Prostitué",
+   "description": "Donner de la joie",
+   "diplomes": [],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 2000,
+     "mi_temps": 900
+   }]
+ }, {
+   "id": 17,
+   "nom": "Travailleur",
+   "description": "Faire des travaux manuelle Divers",
+   "diplomes": [],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }, {
+     "id": 7
+   }, {
+     "id": 8
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": 800,
+     "mi_temps": 300
+   }]
+ }, {
+   "id": 18,
+   "nom": "Pape",
+   "description": "Le plus grand homme de foie",
+   "diplomes": [
+	   {
+       "id": 2,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": "%10",
+     "mi_temps": 0
+   }]
+ }, {
+   "id": 19,
+   "nom": "Chef",
+   "description": "Chef d'une structure",
+   "diplomes": [
+	   {
+       "id": 5,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }, {
+     "id": 6
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": "%10",
+     "mi_temps": 0
+   },{
+     "niveau": 2,
+     "plein_temps": "%10",
+     "mi_temps": 0
+   }]
+ }]

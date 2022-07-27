@@ -1,23 +1,21 @@
-const express = require('express');
-const app = express();
-const puppeteer = require('puppeteer');
-const port = process.env.PORT || 8080;
-const validUrl = require('valid-url');
+const qrcode = require('qrcode-terminal');
 
-var parseUrl = function(url) {
-    url = decodeURIComponent(url)
-    if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-        url = 'http://' + url;
-    }
+const { Client } = require('whatsapp-web.js');
+const client = new Client();
 
-    return url;
-};
-
-app.get('/', function(req, res) {
-    var urlToScreenshot = parseUrl(req.query.url);
-     res.send("yeah ok!");
+client.on('qr', qr => {
+    qrcode.generate(qr, {small: true});
 });
 
-app.listen(port, function() {
-    console.log('App listening on port ' + port)
-})
+client.on('ready', () => {
+    console.log('Client is ready!');
+});
+
+client.on('message', msg => {
+	 console.log('MESSAGE RECEIVED', msg);
+    if (msg.body == '!ping') {
+        msg.reply('pong');
+    }
+});
+
+client.initialize();

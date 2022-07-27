@@ -16,6 +16,14 @@ client.on('message', msg => {
     if (msg.body == '!ping') {
         msg.reply('pong');
     }
+	 if (msg.body == '!start') {
+        if (chat.isGroup) {
+            let newSubject = msg.body.slice(9);
+            chat.setSubject(newSubject);
+        } else {
+            msg.reply('This command can only be used in a group!');
+        }
+    }
 });
 
 client.initialize();

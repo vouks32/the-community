@@ -1,0 +1,17 @@
+[{
+  "gender": "male",
+  "stats": {
+    "money": 10000,
+    "joy": 10,
+    "force": 20,
+    "charisma": 30,
+    "intelligence": 15,
+    "experience": 20,
+    "com_grade": 8
+  },
+  "parents": [],
+  "talents": [],
+  "diplomas": [],
+  "jobs": [],
+  "possessions": []
+}]

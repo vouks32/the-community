@@ -16,8 +16,7 @@ const {
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    ignoreDefaultArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
-    executablePath: "./node_modules/puppeteer/.local-chromium/win64-637110/chrome-win/chrome.exe"
+    ignoreDefaultArgs: ['--no-sandbox', '--disable-setuid-sandbox']
   }
 });
 const clientInfo = new ClientInfo();

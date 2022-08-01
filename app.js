@@ -16,6 +16,7 @@ const {
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
     ignoreDefaultArgs: ['--no-sandbox', '--disable-setuid-sandbox']
   }
 });
@@ -41,7 +42,7 @@ client.on('auth_failure', msg => {
 
 client.on('ready', () => {
   console.log('READY');
-	
+
 });
 
 
@@ -50,7 +51,7 @@ client.on('message', async msg => {
   let chat = await msg.getChat();
   const _contact = await msg.getContact();
   /////////////////////////////////////////////////////////
- /* if (msg.body == '!ping') {
+  /* if (msg.body == '!ping') {
       let button = new Buttons('Que pouvons nous faire pour vous?',[{body:'Procédure visa'},{body:'Import-export'}],'MUSES','Muses-SARL');
         client.sendMessage(msg.from, button);
   } 
@@ -120,8 +121,6 @@ function send_player_list(msg, chat) {
 }
 
 
-
-
 client.on('group_join', (notification) => {
   // User has joined or been added to the group.
   console.log('join', notification);
@@ -147,12 +146,12 @@ client.on('change_state', state => {
 client.on('disconnected', (reason) => {
   console.log('Client was logged out', reason);
 });
-app.get('/', function(req, res) {
-	 res.send('hello world');
+app.get('/', function (req, res) {
+  res.send('hello world');
 });
 
-app.listen(port, function() {
-    console.log('App listening on port ' + port)
+app.listen(port, function () {
+  console.log('App listening on port ' + port)
 })
 
 client.initialize();

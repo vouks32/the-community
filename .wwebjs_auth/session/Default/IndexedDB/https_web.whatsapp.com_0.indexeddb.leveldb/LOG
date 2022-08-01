@@ -1,3 +1,6 @@
-2022/07/30-10:21:14.659 34cc Reusing MANIFEST C:\Users\Vouks\Documents\GitHub\the-community\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/07/30-10:21:14.659 34cc Recovering log #4
-2022/07/30-10:21:14.670 34cc Reusing old log C:\Users\Vouks\Documents\GitHub\the-community\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2022/08/01-13:58:13.377 4764 Reusing MANIFEST C:\Users\Vouks\Documents\GitHub\the-community\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/01-13:58:13.377 4764 Recovering log #4
+2022/08/01-13:58:13.490 4764 Reusing old log C:\Users\Vouks\Documents\GitHub\the-community\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2022/08/01-14:33:26.485 1c34 Level-0 table #8: started
+2022/08/01-14:33:26.570 1c34 Level-0 table #8: 1216498 bytes OK
+2022/08/01-14:33:26.581 1c34 Delete type=0 #4

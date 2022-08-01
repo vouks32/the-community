@@ -1,0 +1,14 @@
+ [{
+   "id": 0,
+   "nom": "Appartement",
+    "description": "Votre logement, l'endroit où vous vivez, dinez, b**sez et dormez",
+	 "cout":{
+	   "prix" : 200,
+		 "multiplier" : "com_grade"
+	 },
+	 "produit" : {
+		 "joie" : 1,
+		 "multiplier" : "com_grade"
+	 },
+	 "structure_id" : 10 
+ }]

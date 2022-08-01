@@ -1,4 +1,5 @@
- [{
+ [
+	 {
    "id": 0,
    "nom": "Informaticien",
    "description": "Gérer l'informatique d'une structure",
@@ -34,7 +35,8 @@
      "mi_temps": 700
    }]
 
- }, {
+ }, 
+	 {
    "id": 1,
    "nom": "Chimiste",
    "description": "Gérer l'utilisation de composants chimique",
@@ -71,7 +73,8 @@
    }]
 
 
- }, {
+ }, 
+	 {
    "id": 2,
    "nom": "Biologiste",
    "description": "Gérer l'utilisation de composants Biologique",
@@ -108,7 +111,8 @@
    }]
 
 
- }, {
+ }, 
+	 {
    "id": 3,
    "nom": "Physicien",
    "description": "Gérer tout aspect physique, méchanique et éléctronique",
@@ -149,7 +153,8 @@
    }]
 
 
- }, {
+ }, 
+	 {
    "id": 4,
    "nom": "Mathématicien",
    "description": "Gérer tout aspect mathématique",
@@ -188,7 +193,8 @@
      "plein_temps": 1700,
      "mi_temps": 800
    }]
- }, {
+ }, 
+	 {
    "id": 5,
    "nom": "Servant de Messe",
    "description": "Servir le seigneur",
@@ -210,7 +216,8 @@
      "mi_temps": 300
    }],
 	 "primes" : ["joie","Grade-A"] 
- }, {
+ }, 
+	 {
    "id": 6,
    "nom": "Prêtre",
    "description": "Servir le seigneur",
@@ -236,7 +243,8 @@
      "mi_temps": 0
    }],
 	 "primes" : ["joie","Grade-A"] 
- }, {
+ }, 
+	 {
    "id": 7,
    "nom": "Avocat",
    "description": "Gérer tout aspect juridique",
@@ -266,7 +274,8 @@
      "plein_temps": 1900,
      "mi_temps": 900
    }]
- }, {
+ }, 
+	 {
    "id": 8,
    "nom": "secrétaire",
    "description": "Gérer tout aspect secrétarial",
@@ -294,7 +303,8 @@
      "plein_temps": 0,
      "mi_temps": 400
    }]
- }, {
+ },
+	 {
    "id": 9,
    "nom": "Gardien",
    "description": "Gérer tout aspect de protection",
@@ -318,7 +328,8 @@
      "plein_temps": 600,
      "mi_temps": 300
    }]
- }, {
+ }, 
+	 {
    "id": 10,
    "nom": "Stratège marketing/politique",
    "description": "Gérer tout aspect stratégique",
@@ -346,7 +357,8 @@
      "plein_temps": 2500,
      "mi_temps": 0
    }]
- }, {
+ }, 
+	 {
    "id": 11,
    "nom": "Stagiaire",
    "description": "Aider dans la structure",
@@ -388,7 +400,8 @@
      "plein_temps": 0,
      "mi_temps": 500
    }]
- }, {
+ }, 
+	 {
    "id": 12,
    "nom": "Président",
    "description": "Gouverner",
@@ -413,11 +426,12 @@
    }],
    "salaire": [
 	  {
-     "niveau": 1,
+     "niveau": 0,
      "plein_temps": 8000,
      "mi_temps": 0
    }]
- }, {
+ }, 
+	 {
    "id": 13,
    "nom": "Ministre",
    "description": "Gérer les affaires administratives",
@@ -439,11 +453,12 @@
    }],
    "salaire": [
 	  {
-     "niveau": 1,
+     "niveau": 0,
      "plein_temps": 6000,
      "mi_temps": 0
    }]
- }, {
+ }, 
+	 {
    "id": 14,
    "nom": "Policier",
    "description": "Faire reigner la loie",
@@ -479,7 +494,8 @@
      "plein_temps": 1900,
      "mi_temps": 0
    }]
- }, {
+ }, 
+	 {
    "id": 15,
    "nom": "Chauffeur",
    "description": "Aider dans la structure",
@@ -499,7 +515,8 @@
      "plein_temps": 700,
      "mi_temps": 300
    }]
- }, {
+ }, 
+	 {
    "id": 16,
    "nom": "Prostitué",
    "description": "Donner de la joie",
@@ -521,7 +538,8 @@
      "plein_temps": 2000,
      "mi_temps": 900
    }]
- }, {
+ }, 
+	 {
    "id": 17,
    "nom": "Travailleur",
    "description": "Faire des travaux manuelle Divers",
@@ -547,33 +565,9 @@
      "plein_temps": 800,
      "mi_temps": 300
    }]
- }, {
+ }, 
+	 {
    "id": 18,
-   "nom": "Pape",
-   "description": "Le plus grand homme de foie",
-   "diplomes": [
-	   {
-       "id": 2,
-       "requis": true
-     }
-   ],
-   "talents": [{
-     "id": 1
-   }, {
-     "id": 3
-   }, {
-     "id": 4
-   }, {
-     "id": 5
-   }],
-   "salaire": [
-	  {
-     "niveau": 1,
-     "plein_temps": "%10",
-     "mi_temps": 0
-   }]
- }, {
-   "id": 19,
    "nom": "Chef",
    "description": "Chef d'une structure",
    "diplomes": [
@@ -603,4 +597,31 @@
      "plein_temps": "%10",
      "mi_temps": 0
    }]
- }]
+ }, 
+	 {
+   "id": 19,
+   "nom": "Pape",
+   "description": "Le plus grand homme de foie",
+   "diplomes": [
+	   {
+       "id": 2,
+       "requis": true
+     }
+   ],
+   "talents": [{
+     "id": 1
+   }, {
+     "id": 3
+   }, {
+     "id": 4
+   }, {
+     "id": 5
+   }],
+   "salaire": [
+	  {
+     "niveau": 1,
+     "plein_temps": "%10",
+     "mi_temps": 0
+   }]
+ } 
+ ]

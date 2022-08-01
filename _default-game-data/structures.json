@@ -1,6 +1,7 @@
- [{
+ [
+	 {
    "id": 0,
-   "nom": "Présidence",
+   "name": "Présidence",
    "description": "La structure gouvernemental qui dirige toutes les autres",
    "jobs": [{
      "job_id": 0,
@@ -53,9 +54,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 600000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 1,
-   "nom": "Ministère Publique",
+   "name": "Ministère Publique",
    "description": "La structure gouvernemental qui Execute Les ordres de la présidence",
    "jobs": [{
      "job_id": 0,
@@ -108,9 +110,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 2,
-   "nom": "PAIN-COM ",
+   "name": "PAIN-COM ",
    "description": "La structure qui fabrique le pain quotidien de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -163,9 +166,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //12 personnes
- },{
+ },
+	 {
    "id": 3,
-   "nom": "BOISSONS-COM",
+   "name": "BOISSONS-COM",
    "description": "La structure qui fabrique les boissons de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -223,9 +227,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 4,
-   "nom": "GACCI",
+   "name": "GACCI",
    "description": "La structure qui fabrique les Vêtements de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -288,9 +293,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 600000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 5,
-   "nom": "BATIMENTS-COM",
+   "name": "BATIMENTS-COM",
    "description": "La structure qui construit les batiments de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -348,9 +354,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 6,
-   "nom": "Sanctuaire",
+   "name": "Sanctuaire",
    "description": "La structure Religieuse de la communauté",
    "jobs": [  {
      "job_id": 7,
@@ -393,9 +400,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 4000000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 7,
-   "nom": "EDU-COM",
+   "name": "EDU-COM",
    "description": "La structure qui gère l'éductaion de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -453,9 +461,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 8,
-   "nom": "SPORT-COM",
+   "name": "SPORT-COM",
    "description": "La structure sportif de la communauté",
    "jobs": [ {
      "job_id": 7,
@@ -493,9 +502,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 9,
-   "nom": "FINANCE-COM ",
+   "name": "FINANCE-COM ",
    "description": "La structure qui gère les finances de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -543,9 +553,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 3500000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 10,
-   "nom": "HOTEL-COM",
+   "name": "HOTEL-COM",
    "description": "La structure qui gère les hôtels de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -598,9 +609,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 4000000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 11,
-   "nom": "TRANS-COM",
+   "name": "TRANS-COM",
    "description": "La structure qui gère le transport de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -648,9 +660,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 12,
-   "nom": "CO-FÉ",
+   "name": "CO-FÉ",
    "description": "un centre de fête et d'amusement",
    "jobs": [{
      "job_id": 0,
@@ -698,9 +711,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 13,
-   "nom": "INSTITUT DES ARTS",
+   "name": "INSTITUT DES ARTS",
    "description": "La structure qui enseigne l'art à la communauté",
    "jobs": [ {
      "job_id": 8,
@@ -738,9 +752,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 500000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 14,
-   "nom": "HOPITAL COMMUNAUTAIRE",
+   "name": "HOPITAL COMMUNAUTAIRE",
    "description": "La structure santé de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -793,9 +808,10 @@
    "revenus_actuel": 0,
    "revenues_garder": 600000
 	 //14 personnes
- },{
+ },
+	 {
    "id": 15,
-   "nom": "POLICE COMMUNAUTAIRE",
+   "name": "POLICE COMMUNAUTAIRE",
    "description": "La structure de protection civile de la communauté",
    "jobs": [{
      "job_id": 0,
@@ -809,16 +825,21 @@
      "players_ids": null
    }, {
      "job_id": 8,
-     "available_positions": 4,
+     "available_positions": 2,
      "taken_positions": 0,
      "players_ids": null
    }, {
      "job_id": 9,
-     "available_positions": 3,
+     "available_positions": 2,
      "taken_positions": 0,
      "players_ids": null
    }, {
      "job_id": 11,
+     "available_positions": 2,
+     "taken_positions": 0,
+     "players_ids": null
+   }, {
+     "job_id": 14,
      "available_positions": 4,
      "taken_positions": 0,
      "players_ids": null
@@ -838,4 +859,5 @@
    "revenus_actuel": 0,
    "revenues_garder": 400000
 	 //14 personnes
- }]
+ }
+ ]

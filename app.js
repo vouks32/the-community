@@ -25,6 +25,7 @@ const com_init = require('./initialisation.js');
 
 
 client.on('qr', qr => {
+	console.log(qr,"\n");
   qrcode.generate(qr, {
     small: true
   });

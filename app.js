@@ -1,3 +1,7 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
+
 const qrcode = require('qrcode-terminal');
 const fs = require('fs-extra');
 const isConnected = false;
@@ -143,6 +147,12 @@ client.on('change_state', state => {
 client.on('disconnected', (reason) => {
   console.log('Client was logged out', reason);
 });
+app.get('/', function(req, res) {
+	 res.send('hello world');
+});
 
+app.listen(port, function() {
+    console.log('App listening on port ' + port)
+})
 
 client.initialize();

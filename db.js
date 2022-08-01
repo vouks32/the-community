@@ -8,9 +8,9 @@ var connection = mysql.createConnection({
   user: user,
   password: password,
   database: database*/
-  host: 'localhost',
-  user: 'root',
-  password: '',
+  host: 'db5004833077.hosting-data.io',
+  user: 'dbu1296977',
+  password: 'JVARproduction_&_0',
   database: 'dbs4053752'
 });
 

@@ -1,5 +1,6 @@
 const qrcode = require('qrcode-terminal');
 const fs = require('fs-extra');
+const isConnected = false;
 const {
   Client,
   Location,
@@ -11,7 +12,7 @@ const {
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    ignoreDefaultArgs: ['--disable-extensions'],
+    ignoreDefaultArgs: ['--no-sandbox','--disable-extensions'],
     executablePath: "./node_modules/puppeteer/.local-chromium/win64-637110/chrome-win/chrome.exe"
   }
 });
@@ -37,6 +38,7 @@ client.on('auth_failure', msg => {
 
 client.on('ready', () => {
   console.log('READY');
+	
 });
 
 client.on('message', async msg => {

@@ -45,6 +45,7 @@ client.on('ready', () => {
 	
 });
 
+
 client.on('message', async msg => {
   console.log('MESSAGE RECEIVED \n FROM : ', msg.from, '\n TEXT :', msg.body);
   let chat = await msg.getChat();

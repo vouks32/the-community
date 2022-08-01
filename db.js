@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+
 /*let host = (location.protocol !== 'https:') ? 'localhost' : 'db5004833077.hosting-data.io';
 let user = (location.protocol !== 'https:') ? 'root' : 'dbu1296977';
 let password = (location.protocol !== 'https:') ? '' : 'JVARproduction_&_0';

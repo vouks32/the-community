@@ -14,7 +14,9 @@ const {
   ClientInfo
 } = require('whatsapp-web.js');
 const client = new Client({
-  authStrategy: new LocalAuth({"dataPath" : "./app/.wwebjs_auth"}),
+  authStrategy: new LocalAuth({
+    "dataPath": "./app/.wwebjs_auth"
+  }),
   puppeteer: {
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   }
@@ -25,7 +27,7 @@ const com_init = require('./initialisation.js');
 
 
 client.on('qr', qr => {
-	console.log(qr,"\n");
+  console.log(qr, "\n");
   qrcode.generate(qr, {
     small: true
   });
@@ -146,12 +148,34 @@ client.on('change_state', state => {
 client.on('disconnected', (reason) => {
   console.log('Client was logged out', reason);
 });
-app.get('/', function (req, res) {
-  res.send('hello world');
+app.get('/', async function (req, res) {
+  res.send('hello world\n\n');
+  if (client.getState() != "CONNECTED") {
+    client.initialize();
+  }
+  client.on('qr', async qr => {
+    console.log(qr, "\n");
+    qrcode.generate(qr, {
+      small: true
+    });
+
+    try {
+      const content = req.params.content;
+      const qrStream = new PassThrough();
+      const result = await QRCode.toFileStream(qrStream, qr, {
+        type: 'png',
+        width: 300,
+        errorCorrectionLevel: 'H'
+      });
+
+      qrStream.pipe(res);
+    } catch (err) {
+      console.error('Failed to return content', err);
+    }
+  });
+
 });
 
 app.listen(port, function () {
   console.log('App listening on port ' + port)
 })
-
-client.initialize();

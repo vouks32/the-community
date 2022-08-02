@@ -150,9 +150,6 @@ client.on('disconnected', (reason) => {
 });
 app.get('/', async function (req, res) {
   res.send('hello world\n\n');
-  if (client.getState() != "CONNECTED") {
-    client.initialize();
-  }
   client.on('qr', async qr => {
     console.log(qr, "\n");
     qrcode.generate(qr, {
@@ -179,3 +176,4 @@ app.get('/', async function (req, res) {
 app.listen(port, function () {
   console.log('App listening on port ' + port)
 })
+client.initialize();

@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const qrcode = require('qrcode-terminal');
+const QRCode = require('qrcode');
+const { PassThrough } = require('stream');
+
 const fs = require('fs-extra');
 const isConnected = false;
 const {

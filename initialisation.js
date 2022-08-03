@@ -1,6 +1,14 @@
-const db = require('./db.js');
-const fs = require('fs');
-db.con();
+//const db = require('./db.js');
+const fs = require('fs-extra');
+const {
+  Client,
+  Location,
+  List,
+  Buttons,
+  LocalAuth,
+  ClientInfo
+} = require('whatsapp-web.js');
+//db.con();
 
 const default_player_infos = {
   "id": 0,
@@ -28,8 +36,14 @@ exports.default_player_infos = default_player_infos;
 
 exports.start_community = function (chat, msg, _contact) {
   let group_id = chat.id;
-  const grps = db.select("SELECT * FROM `com_grp_info` WHERE `grp_id` = ?", [group_id.id]);
-  if (grps.length > 0) {
+  let grp_exist = false;
+  const grps = fs.readJsonSync("games/groups.json");
+  grps.foreach((elt)=>{
+    if(elt.id == group_id.id){
+      grp_exist = true;
+    }
+  });
+  if (grp_exist) {
     msg.reply("Ce group est déjà dans une partie de *The Community*", group_id.id)
   } else {
 
@@ -38,7 +52,7 @@ exports.start_community = function (chat, msg, _contact) {
         "number": 0,
         "array": []
       },
-      "initiator": contact,
+      "initiator": _contact,
       "game": {
         "days_played": 0
       }
@@ -49,9 +63,11 @@ exports.start_community = function (chat, msg, _contact) {
       "fn": "initialize_community",
       "done": true,
     }];
-
-    db.insert("INSERT INTO `com_grp_info` (`id`, `grp_id`, `grp_info`, `grp_task`, `date_added`) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP)", [group_id.id, JSON.stringify(grp_inf), JSON.stringify(grp_tsk)]);
-
+     grps.push(group_id);
+    fs.outputJsonSync("games/groups.json", grps);
+    fs.outputJsonSync("games/"+group_id.id+"/group_info.json", grp_inf);
+    fs.outputJsonSync("games/"+group_id.id+"/group_tasks.json", grp_tsk);
+   
     let description = "Bienvenue dans *la communauté*.\nLa partie commencera aujourd'hui à 19hr.\nSi vous souhaitez y participer vous pouvez envoyer '!start' dans ce group à tout moment et même apres que la partie est débuté.\nMerci à vous (*￣3￣)╭ ."
     chat.setDescription(description);
     let button = new Buttons('Pour y participer, clickez sur le bouton si dessous ou envoyez *!play* dans ce group', [{
@@ -64,46 +80,47 @@ exports.start_community = function (chat, msg, _contact) {
 }
 
 
-exports.join_game = function (chat, msg, _contact) {
+exports.join_game = function (chat, msg, _contact, client) {
   let group_id = chat.id;
-  const grps = db.select("SELECT * FROM `com_grp_info` WHERE `grp_id` = ?", [group_id.id]);
-  let grp_inf;
-  if (grps.length > 0) {
-    grp_inf = JSON.parse(grps[0].grp_info);
-  } else {
-    msg.reply("You must first start a partie buy sending *!start* to this group");
+  let grp_inf = fs.readJsonSync("games/"+group_id.id+"/group_info.json");
+   
+  if (!fs.pathExistsSync("games/"+group_id.id+"/")) {
+    client.sendMessage(chat.id.id, "You must first start a partie buy sending *!start* to this group");
     return;
   }
 
-  const ptpt_exist = db.select("SELECT * FROM `com_ptpts_info` WHERE `grp_id` = ? AND `ptpts_id` = ?", [group_id.id, contact.id._serialized]);
-
-  if (ptpt_exist.length > 0) {
+  const ptpt_exist = false;
+  grp_inf.participants.array.forEach((ptpt)=>{
+    if(ptpt.id._serialized == _contact.id._serialized)
+      ptpt_exist = true;
+  });
+  
+  if (ptpt_exist) {
     msg.reply("Vous êtes déjà dans la partie!");
   } else {
     let player_info = default_player_infos;
     player_info.id = _contact.id._serialized;
     player_info.contact = _contact;
 
-    grp_inf.participants.array.push(contact);
+    grp_inf.participants.array.push(_contact);
     grp_inf.participants.number += 1;
 
-    db.update("UPDATE `com_grp_info` SET `grp_info` = ? WHERE `com_grp_info`.`grp_id` = ?", [JSON.stringify(grp_inf), group_id.id]);
-    db.insert("INSERT INTO `com_ptpts_info` (`id`, `grp_id`, `ptpts_id`, `ptpts_info`, `date_added`) VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP)", [group_id.id, _contact.id._serialized, JSON.stringify(player_info)]);
-
+    fs.outputJsonSync("games/"+group_id.id+"/group_info.json", grp_inf);
+    fs.outputJsonSync("games/"+group_id.id+"/"+_contact.id._serialized+"/player_info.json", player_info);
+    
     msg.reply("Vous êtes désormais membre de la communauté!");
   }
 }
 
-exports.initialize_com = async function (chat) {
+exports.initialize_com = async function (chat,client) {
   let group_id = chat.id;
-  const grps = db.select("SELECT * FROM `com_grp_info` WHERE `grp_id` = ?", [group_id.id]);
-  let grp_inf;
-  if (grps.length > 0) {
-    grp_inf = JSON.parse(grps[0].grp_info);
-  } else {
-    msg.reply("You must first start a partie buy sending *!start* to this group");
+  let grp_inf = fs.readJsonSync("games/"+group_id.id+"/group_info.json");
+   
+  if (!fs.pathExistsSync("games/"+group_id.id+"/")) {
+    client.sendMessage(chat.id.id, "You must first start a partie buy sending *!start* to this group");
     return;
   }
+
   grp_inf.structures = fs.getJsonSync("./_default-game-data/structures.json")
   let jobs = fs.getJsonSync("./_default-game-data/jobs.json");
   if (grp_inf.participants.number > 0) {
@@ -117,8 +134,8 @@ exports.initialize_com = async function (chat) {
     }
     let participant_index = 1;
     grp_inf.participants.array.forEach(async function (_participant, key) {
-      let _participant_profil = db.select("SELECT * FROM `com_ptpts_info` WHERE `grp_id` = ? AND `ptpts_id` = ?", [group_id.id, _participant.id._serialized]);
-
+      let _participant_profil = fs.readJsonSync("games/"+group_id.id+"/"+_participant.id._serialized+"/player_info.json");
+      
       /////////////////////////////////////////////////// infos ///////////////////////////////////
       _participant_profil.id = _participant.id._serialized;
       _participant_profil.contact = _participant;
@@ -131,7 +148,7 @@ exports.initialize_com = async function (chat) {
       _participant_profil.stats.experience = Number((Math.random() * 15).toFixed(0));
       /////////////////////////////////////////////////// talents ///////////////////////////////////////////::
       let talents = fs.getJsonSync("./_default-game-data/talents.json");
-      i = talents.length * Math.random();
+      let i = talents.length * Math.random();
       if (i > talents.length - 1) {
         i = talents.length - 1;
       }
@@ -251,7 +268,7 @@ exports.initialize_com = async function (chat) {
 		
       client.sendMessage(chat.id.id, message);
 
-      db.update("UPDATE `com_ptpts_info` SET `ptpts_info` = ? WHERE `com_ptpts_info`.`ptpts_id` = ?", [JSON.stringify(_participant_profil), _participant.id._serialized]);
+     fs.outputJsonSync("games/"+group_id.id+"/"+_participant.id._serialized+"/player_info.json", _participant_profil);
       participant_index++;
     });
   } else {
